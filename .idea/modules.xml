@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/qiang-java.iml" filepath="$PROJECT_DIR$/.idea/qiang-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qiang-java.iml" filepath="$PROJECT_DIR$/qiang-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" filepath="$PROJECT_DIR$/spring-boot-redis/spring-boot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-web/spring-boot-web.iml" filepath="$PROJECT_DIR$/spring-boot-web/spring-boot-web.iml" />
     </modules>
   </component>
 </project>
