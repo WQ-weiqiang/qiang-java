@@ -1,9 +1,12 @@
 package qiang.springboot.actuator;
 
 
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.HealthAggregator;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
+
 
 /**
  * @author Qiang.wei

@@ -1,11 +1,25 @@
 package qiang.springboot.actuator;
 
 
+import org.hyperic.sigar.CpuInfo;
+import org.hyperic.sigar.CpuPerc;
+import org.hyperic.sigar.FileSystem;
+import org.hyperic.sigar.FileSystemUsage;
+import org.hyperic.sigar.Mem;
+import org.hyperic.sigar.NetFlags;
+import org.hyperic.sigar.NetInterfaceConfig;
+import org.hyperic.sigar.NetInterfaceStat;
+import org.hyperic.sigar.OperatingSystem;
+import org.hyperic.sigar.Sigar;
+import org.hyperic.sigar.SigarException;
+import org.hyperic.sigar.Swap;
+import org.hyperic.sigar.Who;
+import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
+import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.nio.file.FileSystem;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;

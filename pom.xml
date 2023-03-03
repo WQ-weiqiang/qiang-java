@@ -4,14 +4,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>qiang-java</artifactId>
+    <artifactId>qiang-java-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>qiang-java</name>
     <description>qiang-java</description>
 
+    <packaging>pom</packaging>
+
     <properties>
         <java.version>11</java.version>
     </properties>
+
+    <modules>
+        <module>java-base</module>
+    </modules>
 
 
 </project>
