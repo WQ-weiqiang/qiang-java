@@ -6,7 +6,7 @@ services:
     hostname: zoo1
     restart: always
     ports:
-      - 2181:2181
+      - 52181:2181
 
     environment:
       ZOO_MY_ID: 1
@@ -19,7 +19,7 @@ services:
     hostname: zoo2
     restart: always
     ports:
-      - 2182:2181
+      - 52182:2181
 
     environment:
       ZOO_MY_ID: 2
@@ -31,7 +31,7 @@ services:
     hostname: zoo3
     restart: always
     ports:
-      - 2183:2181
+      - 52183:2181
 
     environment:
       ZOO_MY_ID: 3

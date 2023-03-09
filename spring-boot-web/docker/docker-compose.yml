@@ -1,0 +1,92 @@
+version: '3'
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  mysql:
+  postgresql:
+
+
+services:
+
+  redis-master:
+    image: docker.io/redis:7-alpine
+    container_name: redis-master
+    restart: always
+    ports:
+      - 56379:6379
+    #        volumes:
+    #           - ./data:/data
+    #            - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server  --requirepass redis
+    networks:
+      - backend
+
+  redis-slave1:
+    image: docker.io/redis:7-alpine
+    container_name: redis-slave-1
+    restart: always
+    ports:
+      - 56380:6379
+    #        volumes:
+    #           - ./data:/data
+    #            - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server  --slaveof redis-master 6379 --requirepass slave1 --masterauth redis
+    networks:
+      - backend
+  redis-slave2:
+    image: docker.io/redis:7-alpine
+    container_name: redis-slave-2
+    restart: always
+    ports:
+      - 56381:6379
+    #        volumes:
+    #           - ./data:/data
+    #            - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server  --slaveof redis-master 6379 --requirepass slave2 --masterauth redis
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:8
+    container_name: mysql8
+    ports:
+      - 53306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+    networks:
+      - backend
+    #    volumes:
+    #      - ./db:/var/lib/mysql
+    #            - "./conf/my.cnf:/etc/mysql/my.cnf"
+    #            - "./init:/docker-entrypoint-initdb.d"
+
+  postgresql:
+    image: docker.io/postgres:15-alpine
+    container_name: postgresql15
+    hostname: postgresql
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+    ports:
+      - 55432:5432
+    networks:
+      - backend
+      #    volumes:
+      #      - ./postgresql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+#      - ./postgresql/data:/var/lib/postgresql/data
+#      - /etc/localtime:/etc/localtime
+
+
+
+

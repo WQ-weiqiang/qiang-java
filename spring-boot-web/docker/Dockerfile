@@ -23,7 +23,7 @@
 
 ##187mb
 FROM eclipse-temurin:17-jre-alpine
-COPY target/*.jar /app/app.jar
+COPY ../target/*.jar /app/app.jar
 ENTRYPOINT ["java","-jar","/app/app.jar"]
 
 #240

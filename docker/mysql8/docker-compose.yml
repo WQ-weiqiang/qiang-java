@@ -16,7 +16,7 @@ services:
       --lower_case_table_names=1
       --max_allowed_packet=128M
     volumes:
-      - ./db:/var/lib/mysql
+#      - ./db:/var/lib/mysql
       #            - "./conf/my.cnf:/etc/mysql/my.cnf"
       #            - "./init:/docker-entrypoint-initdb.d"
 #    adminer: 
