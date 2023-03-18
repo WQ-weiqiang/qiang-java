@@ -35,6 +35,11 @@
             <artifactId>hanlp</artifactId>
             <version>portable-1.7.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>6.3.2</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -42,5 +47,13 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.hyperic</groupId>
+            <artifactId>sigar</artifactId>
+            <version>1.6.5.132</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>

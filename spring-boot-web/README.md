@@ -1,5 +1,6 @@
 # Actuator
 
+http://localhost:8085/actuator
 # redis
 
 ## 启动redis 容器

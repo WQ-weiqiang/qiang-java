@@ -14,6 +14,10 @@
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.10" level="project" />
     <orderEntry type="library" name="Maven: com.hankcs:hanlp:portable-1.7.5" level="project" />
+    <orderEntry type="library" name="Maven: com.github.oshi:oshi-core:6.3.2" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.12.1" level="project" />
+    <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:5.12.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.9.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
@@ -22,5 +26,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.9.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.9.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.9.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hyperic:sigar:1.6.5.132" level="project" />
   </component>
 </module>

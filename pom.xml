@@ -19,5 +19,8 @@
         <module>java-base</module>
     </modules>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>
