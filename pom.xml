@@ -17,6 +17,7 @@
 
     <modules>
         <module>java-base</module>
+        <module>benchmark</module>
     </modules>
 
     <dependencies>
