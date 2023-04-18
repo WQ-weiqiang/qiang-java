@@ -36,10 +36,10 @@ public class WebServerConfiguiation {
             // TODO Auto-generated method stub
             Http11NioProtocol handler = (Http11NioProtocol) connector.getProtocolHandler();
             handler.setAcceptCount(2000);//排队数
-            handler.setMaxConnections(5000);//最大连接数
-            handler.setMaxThreads(2000);//线程池的最大线程数
-            handler.setMinSpareThreads(100);//最小线程数
-            handler.setConnectionTimeout(30000);//超时时间                    
+            handler.setMaxConnections(500);//最大连接数
+            handler.setMaxThreads(200);//线程池的最大线程数
+            handler.setMinSpareThreads(10);//最小线程数
+            handler.setConnectionTimeout(3000);//超时时间                    
         }
 
     }

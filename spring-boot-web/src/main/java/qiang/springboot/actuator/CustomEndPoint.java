@@ -14,9 +14,7 @@ import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Swap;
 import org.hyperic.sigar.Who;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
-import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -29,8 +27,8 @@ import java.util.Properties;
  * @date 2019/7/31 17:22
  * @Description 哈哈哈
  */
-@Component
-@Endpoint(id = "customEndPoint")
+//@Component
+//@Endpoint(id = "customEndPoint")
 public class CustomEndPoint {
     @ReadOperation
     public Map<String, Object> getCpuInfo() throws SigarException {

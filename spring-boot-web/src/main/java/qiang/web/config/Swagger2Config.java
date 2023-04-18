@@ -1,6 +1,8 @@
 package qiang.web.config;
 
 /**
+ * http://localhost:8085/swagger-ui.html
+ *
  * @author Qiang.wei
  * @date 2020/1/7 17:07
  * @Description
@@ -43,13 +45,15 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //标题
-                .title("Spring Boot 测试使用 Swagger2 构建RESTful API")
+                .title("Spring Boot 测试使用 Swagger2 构建 RESTful API")
                 //联系信息
-                .contact(new Contact("xxx", "http://www.baidu.com", ""))
+                .contact(new Contact("name xxx", "http://www.baidu.com", "mail@example.com"))
                 //版本号
                 .version("1.0")
                 //描述
-                .description("API 描述")
+                .description("API 描述...")
                 .build();
     }
+
+
 }

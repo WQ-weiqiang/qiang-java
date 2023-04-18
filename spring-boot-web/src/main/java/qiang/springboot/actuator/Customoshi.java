@@ -3,8 +3,6 @@ package qiang.springboot.actuator;
 
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
-import org.springframework.stereotype.Component;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.GlobalMemory;
@@ -14,10 +12,9 @@ import java.text.DecimalFormat;
 /**
  * @author qiang
  */
-@Component
-@Endpoint(id = "customOSGI")
+//@Component
+//@Endpoint(id = "customOSGI")
 @Slf4j
-
 public class Customoshi {
 
     void cpuInfo() throws InterruptedException {
